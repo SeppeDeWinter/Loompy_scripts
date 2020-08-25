@@ -118,7 +118,7 @@ def create_argument_parser():
                                  required=True)
     parser_avg.add_argument('-ca', '--column_attributes',
                                  nargs = '+',
-                                 help='<Required> Combination of column attributes to calculate average expression, separated by spaces',
+                                 help='<Required> Column attribute or combination of column attributes to calculate average gene expression on. For example -ca ClusterID to calculate average gene expression across all clusters. For example -ca ClusterID TimePoint to calculate average gene expression across all combinations of ClusterIDs and timepoints (e.g. cluster_1 timepoint_1, cluster_1 timepoint_2, cluster_2 timepoint_1 and cluster_2 timepoint_2 when the loom files has two ClusterIDs and two TimePoints).',
                                  required=True)
     parser_avg.add_argument('-ra', '--row_attribute',
                                  help='<Optional> row attribute specifying on which genes average expression should be calculated, leave empty for all genes',
